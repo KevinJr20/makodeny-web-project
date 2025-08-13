@@ -1,1 +1,113 @@
-# makodeny-web-project
+# Mak'Odeny Engineer Portfolio
+
+This is a personal portfolio website for BMO, a civil engineer at Kenya Ports Authority (KPA), showcasing professional projects, blog posts, and civil engineering trends. The site is built with a `Django` backend (for data management and APIs) and a `React` frontend (for a dynamic, responsive UI). It includes a portfolio section for KPA-related projects, a blog for sharing insights, and a trends section highlighting innovations in port infrastructure.
+
+## Features
+
+### Portfolio:
+
+Displays civil engineering projects (e.g., quay wall designs) with titles, descriptions, images, and metrics (e.g., "load_capacity: 5000 tons").
+
+### Blog:
+
+ Allows posting articles via an admin panel, with rich text support for sharing insights (e.g., sustainable port designs).
+### Trends:
+
+ Highlights industry trends (e.g., green ports, automation) by filtering blog posts marked as trends.
+
+### Responsive Design:
+
+ Uses Tailwind CSS for a modern, mobile-friendly UI, tailored for Kenya’s high mobile usage.
+
+### APIs:
+
+ Django REST Framework provides endpoints (/api/projects/, /api/blogs/, /api/trends/) for dynamic data fetching.
+
+## Tech Stack
+
+Backend: `Django 5.2.5`, `Django REST Framework (DRF)`, `CKEditor (rich text)`, `SQLite (dev database)`.
+
+Frontend: `React 18 (Vite)`, `Tailwind CSS`, `Axios (API calls)`, `React Router (navigation)`.
+
+Deployment: Ready for `Render (Django)` and `Vercel (React)`, with `GitHub` for version control.
+
+## Setup Instructions
+
+### Prerequisites
+
+`Python 3.10+` (download from python.org)
+`Node.js 18+` (download from nodejs.org)
+`Git` (installed and configured)
+
+## Backend Setup
+
+Navigate to the backend folder:`cd backend`
+
+
+Create and activate a virtual environment:python `-m venv venv`
+`venv\Scripts\activate`
+
+
+Install dependencies:`pip install -r requirements.txt`
+
+
+Apply migrations:`python manage.py migrate`
+
+
+Create a superuser for admin access:`python manage.py createsuperuser`
+
+
+Run the server:`python manage.py runserver`
+
+
+Access the admin panel at `http://localhost:8000/admin/ ` to add projects/blogs.
+
+
+
+## Frontend Setup
+
+Navigate to the frontend folder:`cd frontend`
+
+
+Install dependencies:`npm install`
+
+
+Start the development server:`npm run dev`
+
+
+Access the site at `http://localhost:5173`.
+
+
+
+## Adding Content
+
+Projects/Blogs: Log in to `http://localhost:8000/admin/`.
+Add projects under `Projects` (e.g., Title: "Mombasa Port Upgrade", Description: "Improved cargo handling").
+Add blogs under `Blogs` (e.g., Title: "Green Ports", check Is Trend for trends section).
+
+
+The frontend `(http://localhost:5173)` automatically displays projects via the `/api/projects/` endpoint.
+
+## Current Status
+
+`Portfolio` page displays projects with basic styling.
+`APIs` are functional for projects, blogs, and trends.
+`Blog` and `trends` pages are pending implementation.
+
+## Future enhancements: 
+
+Contact form, automated trends via external APIs, production deployment.
+
+## Usage
+
+### For the Engineer: 
+
+Use the admin panel to add/update projects and blogs. Share the GitHub link or deployed site with colleagues or clients to showcase your KPA work.
+
+
+
+## Contact
+
+Built by `Kevin Omondi Jr`. Reach out via `kevojr69@gmail.com` for questions or collaboration.
+
+
