@@ -1,1 +1,0 @@
-# makodeny-web-project

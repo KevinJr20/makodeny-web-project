@@ -56,6 +56,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'engineer_site.urls'
 
+NEWS_API_KEY = 'your-newsapi-key-here'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -142,6 +144,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Email settings
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'k3v0jr1@gmail.com' 
+EMAIL_HOST_PASSWORD = 'your-app-password'  
+DEFAULT_FROM_EMAIL = 'k3vojr1@gmail.com'
+ADMIN_EMAIL = 'mcodenyb@gmail.com'  
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # React dev server
